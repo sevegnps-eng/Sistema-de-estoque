@@ -17,6 +17,7 @@ def armazenar():
             return estoque
 
     estoque.append({
+        "Id": len(estoque) + 1,
         "Produto": produto,
         "Quantidade": quantidade,
         "Valor": valor
@@ -34,18 +35,14 @@ def listar_produtos():
 # Remover Produtos
 
 def remover_produtos():
+
+   id_remover = int(input("Qual id deseja remover? "))
    
    for itens in estoque:
-      
-      item = input("Qual produto deseja remover? ")
-      
-      if item in itens == item:
-         del itens["Produto"]
+      if itens["Id"] == id_remover:
+         estoque.remove(itens)
+         break
 
-
-      return
-        
-            
 # Programa principal
 
 def programa_principal():
@@ -73,7 +70,3 @@ def programa_principal():
             print("Opção inválida")
       
 programa_principal()
-
-
-
-

@@ -4,6 +4,7 @@ estoque = []
 # Armazenar Produtos
 
 def armazenar():
+
     
     produto = input("Qual produto deseja armazenar? ").lower()
     quantidade = int(input("Qual quantidade deseja armazenar? "))
